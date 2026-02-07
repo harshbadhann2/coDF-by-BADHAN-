@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #f7f4ec;
+  --bg-soft: #fefdf8;
+  --text-main: #1f2937;
+  --text-muted: #475569;
+  --card: #fffefc;
+  --line: #e7dfcf;
+  --accent: #0f766e;
+}
+
+:root.dark {
+  --bg-main: #111827;
+  --bg-soft: #1f2937;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --card: #1a2435;
+  --line: #334155;
+  --accent: #2dd4bf;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(249, 115, 22, 0.14), transparent 35%),
+    radial-gradient(circle at 92% 5%, rgba(20, 184, 166, 0.16), transparent 35%),
+    linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+}
+
+.codf-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.55));
+}
+
+.dark .codf-shell {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.65));
+}
