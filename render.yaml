@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: codf
+    env: docker
+    plan: free
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 3030
+      - key: NODE_ENV
+        value: production
+      - key: LIBREOFFICE_PATH
+        value: soffice
+      - key: MAX_FILE_SIZE_MB
+        value: 10
+      - key: MAX_CODE_CHARS
+        value: 300000
+      - key: CLIENT_ORIGIN
+        sync: false
