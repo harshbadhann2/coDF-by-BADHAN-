@@ -16,7 +16,7 @@ const publicDirName = process.env.PUBLIC_DIR || 'public';
 const env = {
   nodeEnv: process.env.NODE_ENV || 'development',
   port: toInt(process.env.PORT, 3030),
-  allowedOrigins: (process.env.CLIENT_ORIGIN || 'http://localhost:3000')
+  allowedOrigins: (process.env.CLIENT_ORIGIN || 'http://localhost:3000' || 'https://codf-by-badhan-badhan.onrender.com/')
     .split(',')
     .map((origin) => origin.trim())
     .filter(Boolean),
